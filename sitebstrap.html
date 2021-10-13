@@ -1,0 +1,186 @@
+
+<!DOCTYPE html>
+<html lang ="fr">
+
+    <head>
+        <meta charset="UTF-8" >
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Guitare</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+        <link href="bstrapcss.css" rel="stylesheet">
+    </head>
+   
+
+
+       <body>
+           <div class = "container">
+             
+               <div class ="row">
+                   <div class ="col-12">
+                       <h1 class =" text-center display-1 ">
+                           Guitares de légendes
+                       </h1>
+                   </div>
+               </div>
+
+
+               <div class = "row" >
+
+                   <div class = "col-3 ">
+                    <img src= "image/LES.jpg " width = "200"  />
+                   </div>
+
+                   <div class = "col-3">
+                    <p class= "para"> La Gibson Les Paul  ou LP est une guitare électrique fabriquée aux États Unis par la firme américaine Gibson Guitar Corporation et dans d'autres pays par sa filiale Epiphone.
+                        C'est en 1952 que le premier modèle de guitare Les Paul sort de l'usine Gibson à Kalamazoo. </br> 
+                        Cette guitare doit son nom à la collaboration commerciale de Gibson avec le musicien,très populaire à ce moment-là, Lester William Polfus, connu sous le nom de Les Paul.
+                        
+                         </p>
+                   </div>
+
+                   <div class = "col-3">
+                    <img class ="image"src= "image/STR.jpg" width = "200" />
+                   </div>
+
+                   <div class = "col-3">
+                    <p class= "para"> La Stratocaster, souvent surnommée Strat, est un modèle de guitare électrique produit par la marque américaine Fender. 
+                        Elle succède en avril 1954 à la Telecaster, sans la remplacer, ces deux instruments demeurant au catalogue jusqu'à nos jours. 
+                        C'est un des modèles les plus répandus au monde, et sa silhouette est devenue l'icône même de la guitare électrique.
+                   </p>
+                  </div>
+               </div>
+            
+            
+
+            <form onsubmit ="traitement()" > 
+              <label>
+                  <p> Guitare préférée ( entrer 1 pour la Les Paul et  2 pour la Stratocaster) ? </p>
+              </label>
+              <input id="nombre" type = "number">
+              <button type ="submit"> Envoyer</button>
+              
+          </form>
+
+          <!--
+
+          <form  > 
+            <label>
+                <p> Cliquer ici pour découvrir une nouvelle guitare ! </p>
+            </label>
+            
+            <button type ="submit" id = "new"> New </button>
+            
+        </form>
+        <div id ="ancrage">
+
+        </div>s
+          -->
+                     
+                   
+                   
+                <div class = "row">
+                    <div class ="col-4">
+                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                    </div>
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img src="image/FRUI.jpg" class="d-block w-100" style="width:100%; height: 500px;"> >
+                      </div>
+                      <div class="carousel-item">
+                        <img src="image/SLASH.jpg" class="d-block w-100" style="width:100%; height: 500px;"> >
+                      </div>
+                      <div class="carousel-item">
+                        <img src="image/HENDRIX.jpg" class="d-block w-100" style="width:100%; height: 500px;">>
+                      </div>
+                      <div class="carousel-item">
+                        <img src="image/PAGE.jpg" class="d-block w-100"style="width:100%; height: 500px;"> >
+                      </div>
+                     
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+                </div>
+                  </div>
+                  <div class="dropdown">
+                    <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                      Liens sites
+                    </a>
+                  
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                      <li><a class="dropdown-item" href="https://www.fender.com">Site de Fender</a></li>
+                      <li><a class="dropdown-item" href="https://www.gibson.com">Site de Gibson</a></li>
+                      <li><a class="dropdown-item" href="https://www.thomann.de/fr">Site de Thomann </a></li>
+                    </ul>
+                </div>
+            </div>
+
+            
+               
+         
+           
+          <script>
+            var myform=document.getElementById("new");
+               myform.addEventListener("click", envoieForm, false);
+
+               function envoieForm()
+               {
+                 
+                var img = document.createElement("img");
+                img.src = "image/SG.jpg";
+                var zone = document.getElementById("ancrage");
+                zone.style.width="400px";
+                zone.style.height="400px";
+                zone.appendChild(img);
+                let i=0;
+               }
+            
+
+              function traitement()
+              {
+
+               var nombre = parseInt(document.getElementById('nombre').value);
+               if (nombre=="1")
+                {
+                    alert("Tu as choisi la Les Paul !");
+                    
+
+                    
+                }
+                if (nombre=="2")
+                {
+                    alert("Tu as choisi la Stratocaster !");
+                   
+                    
+                }
+
+
+
+              }
+          </script>
+       
+                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+                   
+       </body>
+
+  
+
+
+</html>
+
+
+
+
+
+   
